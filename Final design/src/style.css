@@ -100,6 +100,9 @@ li {
 strong {
   color: #f65282;
 }
+.measurement {
+  color: #f65282;
+}
 
 .temperature-container {
   position: relative;
@@ -129,6 +132,7 @@ img.current-weather-icon {
   top: -38px;
   color: #212121;
 }
+
 hr {
   color: #dad4e9;
 }

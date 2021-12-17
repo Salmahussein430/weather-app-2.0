@@ -11,17 +11,20 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>Weather App</title>
   </head>
   <body>
     <div class="page">
       <div class="container">
         <div class="weather">
-          <form>
+          <form id="search-form">
             <div class="row">
               <div class="col-9">
                 <input
-                  class="form-control search-input"
+                  class="form-control"
+                  id="search-text-input"
                   type="text"
                   placeholder="Enter a city..."
                   aria-label="default input example"
@@ -39,15 +42,19 @@
               <div class="col-6">
                 <h1>London</h1>
                 <ul>
-                  <li>
+                  <li id="date-time">
                     <span id="weekday">Monday</span
-                    ><span id="current-time"> 14:01</span>,
-                    <span id="weather-description">light rain</span>
+                    ><span id="current-time"> 14:01</span>
                   </li>
+
+                  <span id="weather-description">light rain</span>
+
                   <li>
                     Humidity:
-                    <strong class="humidity" id="humidity-id">90%,</strong>
-                    Wind: <strong class="wind" id="wind-id">3mph</strong>
+                    <strong class="humidity" id="humidity-id">90</strong
+                    ><span class="measurement">%,</span> Wind:
+                    <strong class="wind" id="wind-id">3</strong
+                    ><span class="measurement">mph</span>
                   </li>
                 </ul>
               </div>
@@ -61,7 +68,7 @@
                       width="52"
                       height="52"
                     />
-                    <span class="temperature">6</span
+                    <span class="temperature" id="highest-temp">6</span
                     ><span class="unit">°C</span>
                   </div>
                 </div>
